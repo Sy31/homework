@@ -8,6 +8,14 @@ public class Palindrome {
 	 * @return
 	 */
 	public static boolean isPalindrome(String word) {
-		return false;
+		int l =word.length();
+	if (l==0 || l==1) {
+		return true;
+		}
+	else if (word.charAt(0) != word.charAt(l-1) ){
+		  return false;
+		  }
+	else return isPalindrome(word.substring(1,l-2));
+    }
 	}
 }
